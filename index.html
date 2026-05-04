@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>AniList Viewer · MrGeo</title>
+  <link rel="stylesheet" href="ani-recs/style.css">
+</head>
+<body>
+<div class="page">
+  <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 0.5rem;">
+    <h2 style="color: var(--color-text-primary); font-size: 1.5rem; font-weight: 600; letter-spacing: -0.3px;">📺 Anime Explorer</h2>
+    <div class="user-hint">🔍 fixed user: MrGeo</div>
+  </div>
+
+  <div class="top-bar">
+    <div class="inputs-row">
+      <select class="genre-select" id="genre-select">
+        <option value="">🎭 All genres</option>
+        <option>Action</option><option>Adventure</option><option>Comedy</option>
+        <option>Drama</option><option>Fantasy</option><option>Horror</option>
+        <option>Mystery</option><option>Romance</option><option>Sci-Fi</option>
+        <option>Slice of Life</option><option>Sports</option><option>Supernatural</option>
+        <option>Thriller</option><option>Psychological</option><option>Mecha</option>
+      </select>
+      <button id="fetch-btn">⟳ Fetch list</button>
+    </div>
+    <div class="tags-row">
+      <input type="text" id="tags-input" placeholder="🚫 Excluded tags (comma separated) — e.g. Harem, Gore, Ecchi" />
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="dot dot-current"></span>
+      <span class="section-title">📺 CURRENTLY WATCHING</span>
+      <span class="count" id="current-count"></span>
+    </div>
+    <div class="anime-grid" id="current-list"><p class="empty">✨ Click "Fetch list" to load MrGeo's anime</p></div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="dot dot-completed"></span>
+      <span class="section-title">✅ COMPLETED (score > 8)</span>
+      <span class="count" id="completed-count"></span>
+    </div>
+    <div class="anime-grid" id="completed-list"></div>
+  </div>
+</div>
+
+<script src="ani-recs/script.js"></script>
+</body>
+</html>
